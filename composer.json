@@ -1,0 +1,28 @@
+{
+    "name": "stark/test-patch",
+    "autoload": {
+        "psr-4": {
+            "Stark\\TestPatch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Youta Obby Sidane",
+            "email": "dyosby237@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^6.0"
+    },
+    "require": {
+        "cweagans/composer-patches": "^1.7"
+    },
+    "extra": {
+        "patches": {
+            "symfony/var-dumper": {
+                "Change the color of the strings": "./patches/var_dumper.patch"
+            }
+        },
+        "composer-exit-on-patch-failure": true
+    }
+}
